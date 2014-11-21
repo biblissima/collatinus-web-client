@@ -154,6 +154,7 @@ function generateFormToken($form) {
               echo linOpt($dico, "ddu:", "du Cange");
               echo linOpt($dico, "dge:", "Georges");
               echo linOpt($dico, "dva:", "Valbuena");
+              echo linOpt($dico, "dje:", "Jeanneau");
             ?>
           </select>
           
