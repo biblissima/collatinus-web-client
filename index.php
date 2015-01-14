@@ -55,10 +55,10 @@ function generateFormToken($form) {
       "@context" : "http://schema.org",
       "@type" : "WebApplication",
       "license": "http://creativecommons.org/licenses/by-nc/4.0/",
-      "name" : "Collatinus web",
+      "name" : "Collatinus-web",
       "image" : "http://outils.biblissima.fr/collatinus-web/img/pseudo-sappho.png",
       "url" : "http://outils.biblissima.fr/collatinus-web",
-      "description" : "Collatinus web est la version en ligne de Collatinus, un logiciel libre, gratuit et multi-plateforme pour la lemmatisation et l'analyse morphologique de textes latins.",
+      "description" : "Collatinus-web est la version en ligne de Collatinus, un logiciel libre, gratuit et multi-plateforme pour la lemmatisation et l'analyse morphologique de textes latins.",
       "provider" : {
         "@type" : "Organization",
         "name" : "Equipex Biblissima"
