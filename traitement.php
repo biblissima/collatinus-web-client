@@ -59,31 +59,22 @@ if (isset($_POST['opera'])) {
   $opera = $_POST['opera'];
   switch ($opera) {
     case 'consult' :
-      /*$_SESSION['dicos'] = strip_tags($_POST['dicos']);
-      $_SESSION['lemme'] = strip_tags($_POST['lemme']);
-      $requete = $_SESSION['dicos'] . $_SESSION['lemme'];*/
       $dicos = strip_tags($_POST['dicos']);
       $lemme = strip_tags($_POST['lemme']);
       $requete = $dicos . $lemme;
       break;
     case 'flexion' :
-      /*$_SESSION['lemme'] = strip_tags($_POST['lemme']);
-      $requete = "f:" . $_SESSION['lemme'];*/
       $lemme = strip_tags($_POST['lemme']);
       $requete = "f:" . $lemme;
       break;
     case 'traite_txt' :
-      /*$_SESSION['langue'] = $_POST['langue'];
-      $_SESSION['texte'] = strip_tags($_POST['texte']);*/
       $langue = $_POST['langue'];
       $texte = strip_tags($_POST['texte']);
       switch($_POST['action']) {
         case 'Lemmatiser' :
-          //$requete = "l" . $_SESSION['langue'] . $_SESSION['texte'];
           $requete = "l" . $langue . $texte;
           break;
         case 'Analyser' :
-          //$requete = "a" . $_SESSION['langue'] . $_SESSION['texte'];
           $requete = "a" . $langue . $texte;
           break;
         case 'Scander' :
@@ -96,16 +87,6 @@ if (isset($_POST['opera'])) {
   $requete = $_POST["r"];
 } else {
   // La première fois
-  /*$_SESSION['texte'] = "Arma uirumque cano, Troiae qui primus ab oris Italiam, fato profugus, Lauiniaque uenit litora, multum ille et terris iactatus et alto ui superum saeuae memorem Iunonis ob iram";
-  $requete = '';
-  $_SESSION['lemme'] = '';
-  $_SESSION['dicos'] = 'dga:';
-  $_SESSION['langue'] = 'fr:';
-  
-  $lemme = $_SESSION['lemme'];
-  $dico = $_SESSION['dicos'];
-  $langue = $_SESSION['langue'];
-  $texte = $_SESSION['texte'];*/
   $lemme = "";
   $dico = "dga:";
   $langue = "fr:";
@@ -186,7 +167,6 @@ if ($requete != '') {
     echo "</p>";
 
     // affichage des lemmes
-    //echo "<ul>\n";
     foreach ($items as $item) {
       $eclats = explode("%", $item);
       $i = 0;
@@ -201,7 +181,6 @@ if ($requete != '') {
       }
       echo "</ul></p>\n";  // Fin de l'analyse du mot
     }
-    //echo "</ul>\n";
   } else {
     echo $sol;
   }
