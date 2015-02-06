@@ -121,9 +121,16 @@ function generateFormToken($form) {
     <div class="jumbotron">
       <div class="container">
         <div class="pull-left hidden-xs logo"></div>
-        <h1>Collatinus-web <small class="text-danger">[bêta]</small></h1>
-        <p>Version web du lemmatiseur et analyseur morphologique de textes latins</p>
-        <a class="btn btn-primary" data-placement="bottom" data-toggle="tooltip" data-original-title="Page de téléchargement de Collatinus" href="http://outils.biblissima.fr/collatinus">Tester la version pour bureau <small>(Mac, Windows, GNU/Linux)</small></a>
+        <div class="pull-left">
+          <h1>Collatinus-web <small class="text-danger">[bêta]</small></h1>
+          <p>Version web du lemmatiseur et analyseur morphologique de textes latins</p>
+          <div class="btn-container">
+            <a class="btn btn-default btn-github" href="https://github.com/biblissima/collatinus-web"><span class="fa fa-github"></span>&nbsp; Collatinus-web sur Github</a>
+          </div>
+          <div class="btn-container">
+            <a class="btn btn-primary" data-placement="bottom" data-toggle="tooltip" data-original-title="Page de téléchargement de Collatinus" href="http://outils.biblissima.fr/collatinus">Tester la version pour bureau <small>(Mac, Windows, GNU/Linux)</small></a>
+          </div>
+        </div>
       </div>
     </div><!-- /.jumbotron -->
     
