@@ -11,6 +11,13 @@ function interroge($requete) {
   if (!$sk) {
     return "erreur $errnum $errstr";
   }
+  $avant = array('æ','Æ','œ','Œ','̀','́','à','á','è','é','ì','í','ò','ó','ù','ú','À','Á','È','É','Ì','Í','Ò','Ó','Ù','Ú');
+  $apres = array('ae','Ae','oe','Oe','','','a','a','e','e','i','i','o','o','u','u','A','A','E','E','I','I','O','O','U','U');
+  $requete = str_replace($avant, $apres, $requete);
+  $avant = array('̄','̆','ā','ă','ē','ĕ','ī','ĭ','ō','ŏ','ū','ŭ','Ā','Ă','Ē','Ĕ','Ī','Ĭ','Ō','Ŏ','Ū','Ŭ');
+  $apres = array('','','a','a','e','e','i','i','o','o','u','u','A','A','E','E','I','I','O','O','U','U');
+  $requete = str_replace($avant, $apres, $requete);
+  // Remplacement de caractères exotiques par leur équivalent ASCII
   fwrite($sk, $requete);
   $dati = "";
   while (!feof($sk)) {
