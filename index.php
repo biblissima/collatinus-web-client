@@ -59,6 +59,7 @@ function generateFormToken($form) {
       "image" : "http://outils.biblissima.fr/collatinus-web/img/pseudo-sappho.png",
       "url" : "http://outils.biblissima.fr/collatinus-web",
       "description" : "Collatinus-web est la version en ligne de Collatinus, un logiciel libre, gratuit et multi-plateforme pour la lemmatisation et l'analyse morphologique de textes latins.",
+      "applicationCategory": "Linguistics",
       "provider" : {
         "@type" : "Organization",
         "name" : "Equipex Biblissima"
