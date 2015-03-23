@@ -262,26 +262,8 @@ function generateFormToken($form) {
         </div>
       </div>
     </footer>
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="<?php echo $staticBaseUrl; ?>libs/jquery-1.10.1.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="<?php echo $staticBaseUrl; ?>libs/bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/script.js"></script>
-    
-    <!-- Piwik -->
-    <script type="text/javascript">
-       var _paq = _paq || [];
-       _paq.push(['trackPageView']);
-       _paq.push(['enableLinkTracking']);
-       (function() {
-       var u=(("https:" == document.location.protocol) ? "https" : "http") + "://piwik.biblissima-condorcet.fr/";
-       _paq.push(['setTrackerUrl', u+'piwik.php']);
-       _paq.push(['setSiteId', 4]);
-       var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
-       g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-       })();
-    </script>
-    <noscript><img src="http://piwik.biblissima-condorcet.fr/piwik.php?idsite=4" style="border:0" alt="" /></noscript>
+    <?php
+      include 'analytics_outils.php';
+    ?>
   </body>
 </html>
