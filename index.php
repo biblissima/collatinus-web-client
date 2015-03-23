@@ -262,6 +262,12 @@ function generateFormToken($form) {
         </div>
       </div>
     </footer>
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="<?php echo $staticBaseUrl; ?>libs/jquery-1.10.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="<?php echo $staticBaseUrl; ?>libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
     <?php
       include 'analytics_outils.php';
     ?>
