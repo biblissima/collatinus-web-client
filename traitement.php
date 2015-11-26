@@ -130,7 +130,7 @@ if ($requete != '') {
     
     $clr = count($lignesr) - 1; // nombre de lignes
     $ilr = 0; // numéro de la ligne courante
-    $motsr = preg_split("/\s+/", $lignesr[$ilr]); // découpage en mots de la ligne courante
+    $motsr = str_word_count($lignesr[$ilr], 1); // découpage en mots de la ligne courante
     $cmr = count($motsr) - 1; // nombre de mots de la ligne courante
     
     // affichage des bulles
