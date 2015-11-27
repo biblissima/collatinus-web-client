@@ -131,6 +131,20 @@ if ($requete != '') {
     $clr = count($lignesr) - 1; // nombre de lignes
     $ilr = 0; // numéro de la ligne courante
     $motsr = str_word_count($lignesr[$ilr], 1); // découpage en mots de la ligne courante
+    // Essai de patch pour régler le problème des ponctuations isolées, Philippe Nov. 2015
+    $iii = count($motsr) - 1;
+    while ($iii > 0) {
+      if (strspn($motsr[$iii],"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ") == 0) {
+        $motsr[$iii-1]+=" "+$motsr[$iii];
+        array_splice($motsr, $iii, 1);
+      }
+      $iii--;
+    }
+    if (strspn($motsr[0],"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ") == 0) {
+      $motsr[1]+=$motsr[0]+" ";
+      array_splice($motsr, 0, 1);
+    }
+    // fin du patch
     $cmr = count($motsr) - 1; // nombre de mots de la ligne courante
     
     // affichage des bulles
