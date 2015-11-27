@@ -130,7 +130,7 @@ if ($requete != '') {
     
     $clr = count($lignesr) - 1; // nombre de lignes
     $ilr = 0; // numéro de la ligne courante
-    $motsr = explode(" ",$lignesr[$ilr]); // découpage en mots de la ligne courante
+    $motsr = preg_split("/\s+/", $lignesr[$ilr]); // découpage en mots de la ligne courante
     // Essai de patch pour régler le problème des ponctuations isolées, Philippe Nov. 2015
     $iii = count($motsr) - 1;
     while ($iii > 0) {
