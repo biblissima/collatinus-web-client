@@ -141,7 +141,7 @@ if ($requete != '') {
       $iii--;
     }
     if (strspn($motsr[0],"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ") == 0) {
-      $motsr[1]+=$motsr[0]+" ";
+      $motsr[1]=$motsr[0]+" "+$motsr[1];
       array_splice($motsr, 0, 1);
     }
     // fin du patch
