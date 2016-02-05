@@ -85,8 +85,8 @@ function generateFormToken($form) {
     </script>
     
     <!-- css -->
-    <link href="<?php echo $staticBaseUrl; ?>libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?php echo $staticBaseUrl; ?>css/style.css" rel="stylesheet">
+    <link href="<?php echo $staticBaseUrl; ?>/vendor/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo $staticBaseUrl; ?>/css/style_old.css" rel="stylesheet">
     <link href="http://outils.biblissima.fr/collatinus/css/style.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
@@ -253,7 +253,7 @@ function generateFormToken($form) {
         
         <div class="col-sm-10">
           <p class="navbar-text">
-            <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="<?php echo $staticBaseUrl; ?>img/cc-by-nc-4.0-88x31.png" /></a>&nbsp; <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a><br />
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="<?php echo $staticBaseUrl; ?>/images/cc-by-nc-4.0-88x31.png" /></a>&nbsp; <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a><br />
             <small>Yves Ouvrard et Philippe Verkerk, 2014 &ndash; Programme mis à votre disposition sans aucune garantie, mais avec l'espoir qu'il vous sera utile.</small></p>
         </div>
         
@@ -264,9 +264,9 @@ function generateFormToken($form) {
     </footer>
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="<?php echo $staticBaseUrl; ?>libs/jquery-1.10.1.min.js"></script>
+    <script src="<?php echo $staticBaseUrl; ?>/vendor/jquery-1.10.2.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="<?php echo $staticBaseUrl; ?>libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="<?php echo $staticBaseUrl; ?>/vendor/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
     <?php
       include 'analytics_outils.php';
