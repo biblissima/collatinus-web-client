@@ -268,8 +268,32 @@ function generateFormToken($form) {
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="<?php echo $staticBaseUrl; ?>/vendor/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
-    <?php
-      include 'analytics_outils.php';
-    ?>
+    <!-- Piwik -->
+    <script type="text/javascript"> 
+      var _paq = _paq || [];
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      _paq.push([function() {
+        var self = this;
+        function getOriginalVisitorCookieTimeout() {
+          var now = new Date(),
+          nowTs = Math.round(now.getTime() / 1000),
+          visitorInfo = self.getVisitorInfo();
+          var createTs = parseInt(visitorInfo[2]);
+          var cookieTimeout = 33696000; // 13 mois en secondes
+          var originalTimeout = createTs + cookieTimeout - nowTs;
+          return originalTimeout;
+        }
+        this.setVisitorCookieTimeout( getOriginalVisitorCookieTimeout() );
+      }]);
+      (function() {
+        var u=(("https:" == document.location.protocol) ? "https" : "http") + "://piwik.biblissima-condorcet.fr/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', 6]);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+        g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript><img src="http://piwik.biblissima-condorcet.fr/piwik.php?idsite=6" style="border:0" alt="" /></noscript>
   </body>
 </html>
