@@ -183,13 +183,14 @@ if ($requete != '') {
         // Essai de patch pour régler le problème des ponctuations isolées, Philippe Nov. 2015
         $iii = count($motsr) - 1;
         while ($iii > 0) {
-          if (strspn($motsr[$iii],"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ") == 0) {
+          if (strspn($motsr[$iii],"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ") == 0) {
+            // J'ajoute les chiffres car Collatinus considère les nombres comme des mots. Philippe Oct. 2016
             $motsr[$iii-1] = $motsr[$iii-1] . " " . $motsr[$iii];
             array_splice($motsr, $iii, 1);
           }
           $iii--;
         }
-        if (strspn($motsr[0],"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ") == 0) {
+        if (strspn($motsr[0],"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ") == 0) {
           $motsr[1]=$motsr[0] . " " . $motsr[1];
           array_splice($motsr, 0, 1);
         }
