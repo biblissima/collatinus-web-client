@@ -1,6 +1,6 @@
 # Collatinus-web
 
-Ce dépôt contient les fichiers de l'interface web de Collatinus-web (partie "front-end").
+Ce dépôt contient les fichiers de l'interface web de Collatinus-web (partie cliente et "front-end").
 
 Collatinus-web est la version en ligne de [Collatinus](http://outils.biblissima.fr/collatinus), un logiciel de lemmatisation et d'analyse morphologique de textes latins. Il permet de :
 - rechercher un lemme dans plusieurs dictionnaires de latin (Gaffiot, Calonghi, Lewis & Short, du Cange, Georges, Valbuena, De Miguel)
@@ -16,7 +16,13 @@ Tester Collatinus-web sur le site de Biblissima : [https://outils.biblissima.fr/
 
 La partie web de Collatinus-web interagit avec un serveur prenant la forme d'un démon écrit en C++. Son code est disponible dans la branche `Daemon` de Collatinus : https://github.com/biblissima/collatinus/tree/Daemon
 
-La partie serveur communique avec la partie cliente à travers un socket de connexion (port 5555). Côté client, le script `ajax/collatinus-web/collatinus-web.php` se charge de transmettre les requêtes au démon via `fsockopen()` et de récupèrer les réponses pour l'affichage des données dans la page web.
+La partie serveur communique avec le client à travers un socket de connexion (port 5555). Côté client, le script `ajax/collatinus-web/collatinus-web.php` se charge de transmettre les requêtes au démon via `fsockopen()` et de récupèrer les réponses pour l'affichage des données dans la page web.
+
+Pour faire tourner votre propre instance de Collatinus-web, il vous faudra :
+- compiler tout d'abord le démon serveur (branche `Daemon` de Collatinus, disponible [ici](https://github.com/biblissima/collatinus/tree/Daemon))
+- servir les fichiers de ce dépôt via un serveur Web classique (Apache, Nginx etc.). Les éléments suivants devront être adaptés le cas échéant:
+  - les chemins vers les fichiers js et css dans `index.php`
+  - le chemin vers le script php dans `js/collatinus-web.js` (requêtes Ajax POST l.65 et l.133)
 
 ## Crédits
 
