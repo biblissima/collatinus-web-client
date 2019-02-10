@@ -3,24 +3,25 @@
 Ce dépôt contient les fichiers de l'interface web de Collatinus-web (partie "front-end").
 
 Collatinus-web est la version en ligne de [Collatinus](http://outils.biblissima.fr/collatinus), un logiciel de lemmatisation et d'analyse morphologique de textes latins. Il permet de :
-- rechercher un lemme dans plusieurs dictionnaires de latin (Gaffiot, Calonghi, Lewis & Short, du Cange, Georges, Valbuena)
+- rechercher un lemme dans plusieurs dictionnaires de latin (Gaffiot, Calonghi, Lewis & Short, du Cange, Georges, Valbuena, De Miguel)
 - fléchir un lemme
-- scander un texte latin
-- lemmatiser un texte latin (7 langues cibles)
+- lemmatiser, taguer, scander et accentuer un texte latin (7 langues cibles)
 - effectuer son analyse morphologique
 
-Il est développé par Yves Ouvrard et Philippe Verkerk avec l'aide de Régis Robineau dans le cadre de la "Boîte à Outils" de l'Equipex [Biblissima](http://www.biblissima-condorcet.fr).
+Cette version de Collatinus-web est basée sur la version **11.2** de Collatinus. Son lexique a été élargi grâce au dépouillement systématique des dictionnaires numériques (Gaffiot 2016, Jeanneau 2017, Lewis & Short 1879 et Georges 1913). Le lexique contient aujourd'hui plus de 80 000 lemmes.
 
-Collatinus-web sur le site Biblissima : [http://outils.biblissima.fr/collatinus-web](http://outils.biblissima.fr/collatinus-web)
+Tester Collatinus-web sur le site de Biblissima : [https://outils.biblissima.fr/fr/collatinus-web](https://outils.biblissima.fr/fr/collatinus-web)
+
+## Instructions
+
+La partie web de Collatinus-web interagit avec un serveur prenant la forme d'un démon écrit en C++. Son code est disponible dans la branche `Daemon` de Collatinus : https://github.com/biblissima/collatinus/tree/Daemon
+
+La partie serveur communique avec la partie cliente à travers un socket de connexion (port 5555). Côté client, le script `ajax/collatinus-web/collatinus-web.php` se charge de transmettre les requêtes au démon via `fsockopen()` et de récupèrer les réponses pour l'affichage des données dans la page web.
+
+## Crédits
+
+Collatinus-web est développé par Yves Ouvrard et Philippe Verkerk avec l'aide de Régis Robineau dans le cadre de la "Boîte à Outils" de l'Equipex [Biblissima](https://projet.biblissima.fr).
 
 ## Licence
 
 Ce programme est mis à disposition par Yves Ouvrard et Philippe Verkerk sous licence [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0/) (CC BY-NC).
-
-## Instructions
-
-L'application Collatinus-web est constituée de deux dépôts distincts :
-- un dépôt pour l'interface web (client) : https://github.com/biblissima/collatinus-web-ui
-- un autre pour la partie serveur (démon C++) : https://github.com/biblissima/collatinus-web-daemon
-
-La partie serveur (démon) communique avec la partie cliente à travers un socket de connexion (port 5555). Côté client, le script traitement.php se charge de transmettre les requêtes au démon via fsockopen() et de récupèrer les réponses pour l'affichage des données dans la page web.
