@@ -2,7 +2,7 @@
 
 Ce dépôt contient les fichiers de l'interface web de Collatinus-web (partie cliente et "front-end").
 
-Collatinus-web est la version en ligne de [Collatinus](http://outils.biblissima.fr/collatinus), un logiciel de lemmatisation et d'analyse morphologique de textes latins. Il permet de :
+Collatinus-web est la version en ligne de [Collatinus](https://github.com/biblissima/collatinus), un logiciel de lemmatisation et d'analyse morphologique de textes latins. Il permet de :
 - rechercher un lemme dans plusieurs dictionnaires de latin (Gaffiot, Calonghi, Lewis & Short, du Cange, Georges, Valbuena, De Miguel)
 - fléchir un lemme
 - lemmatiser, taguer, scander et accentuer un texte latin (7 langues cibles)
@@ -10,7 +10,7 @@ Collatinus-web est la version en ligne de [Collatinus](http://outils.biblissima.
 
 Cette version de Collatinus-web est basée sur la version **11.2** de Collatinus. Son lexique a été élargi grâce au dépouillement systématique des dictionnaires numériques (Gaffiot 2016, Jeanneau 2017, Lewis & Short 1879 et Georges 1913). Le lexique contient aujourd'hui plus de 80 000 lemmes.
 
-Tester Collatinus-web sur le site de Biblissima : [https://outils.biblissima.fr/fr/collatinus-web](https://outils.biblissima.fr/fr/collatinus-web)
+**Tester Collatinus-web** sur le site de Biblissima : [https://outils.biblissima.fr/fr/collatinus-web](https://outils.biblissima.fr/fr/collatinus-web)
 
 ## Instructions
 
