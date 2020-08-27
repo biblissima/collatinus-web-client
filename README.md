@@ -1,3 +1,6 @@
+*WARNING: This repository is now archived, it is superseded by the [outils.biblissima.fr](https://github.com/biblissima/outils.biblissima.fr) repository, where you will find the files and instructions to run your own instance of Collatinus-web locally.*
+
+
 # Collatinus-web
 
 Ce dépôt contient les fichiers de l'interface web de Collatinus-web (partie cliente et "front-end").
